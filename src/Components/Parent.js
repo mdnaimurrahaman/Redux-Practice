@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { COUNTER_CONTEXT } from "../App";
 import Chield from "./Chield";
 
 const Parent = () => {
-  const [count, setCount] = useState(0);
+  const {count} = useContext(COUNTER_CONTEXT)
   return (
     <div>
       <div className="card w-96 bg-neutral text-neutral-content m-auto mt-11">
@@ -15,7 +16,7 @@ const Parent = () => {
           </div>
         </div>
       </div>
-      <Chield count={count} setCount = {setCount}/>
+      <Chield/>
     </div>
   );
 };

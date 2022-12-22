@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 
-import { useState } from "react";
+import { COUNTER_CONTEXT } from "../App";
 
-const Chield = ({count, setCount}) => {
+
+const Chield = () => {
+  const {count, setCount} = useContext(COUNTER_CONTEXT)
   return (
     <div className="">
       <div className="card w-96 bg-neutral text-neutral-content m-auto mt-10">
