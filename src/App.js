@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 import "./App.css";
+import Counter from "./Components/Counter";
 import Parent from "./Components/Parent";
 
 export const COUNTER_CONTEXT = createContext();
@@ -11,7 +12,7 @@ function App() {
     <COUNTER_CONTEXT.Provider value={value}>
       <div>
         <h1 className="m-auto text-5xl">Redux Practice</h1>
-        <Parent />
+        <Counter/>
       </div>
     </COUNTER_CONTEXT.Provider>
   );
